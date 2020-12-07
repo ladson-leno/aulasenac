@@ -1,0 +1,14 @@
+#bloco {
+    color: darkblue;
+    background-color: violet;
+    text-shadow: 2px 2px 2px red;
+}
+
+.bloco {
+    background-color: greenyellow;
+    color: white !important;
+}
+
+ .tamFonte {
+     font-size: 100px;
+ }
