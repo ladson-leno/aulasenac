@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aulas HTML</title>
-<link rel="stylesheet" href="index.css">
-<style>
-/* #bloco {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas HTML</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* #bloco {
 color: blue;
 text-shadow: 2px 2px 2px red;
 }
@@ -19,16 +20,44 @@ color: white !important;
 .tamFonte {
 font-size: 22px;
 } */
-</style>
+    </style>
 </head>
+
 <body>
-<!-- atributo inline -->
-<h1 class="bloco tamFonte" style="color: red; text-shadow: 2px 3px 2px blue;"> Minha página inicial</h1>
-<!-- atributo em bloco -->
-<br>
-<h1 class="bloco" id="bloco">Minha página2 inicial</h1>
-<br>
-<h1 class="bloco tamFonte">Minha página3 inicial</h1>
-<p>Este é meu primeiro parágrafo</p>
+    <!-- atributo inline -->
+    <h1 class="bloco tamFonte" style="color: red; text-shadow: 2px 3px 2px blue;"> Minha página inicial</h1>
+    <!-- atributo em bloco -->
+    <br>
+    <h1 class="bloco" id="bloco">Minha página2 inicial</h1>
+    <br>
+    <h1 id="titulo" class="bloco tamFonte">Minha página3 inicial</h1>
+    <p id="mudaTexto">Este é meu primeiro parágrafo</p>
+    <button onclick="mudarTexto()">Mudar</button><br><br>
+    <button onclick="inserirTexto()">Inserir</button>
+    <button onclick="limparTexto()">Limpar</button>
+    <input type="text" name="texto" id="campo">
 </body>
+
+<script>
+
+    function mudarTexto() {
+
+        var txt = document.getElementById('titulo').innerHTML
+        console.log(txt)
+        document.getElementById('mudaTexto').innerHTML = txt
+        document.getElementById('mudaTexto').style.color = "red"
+    }
+
+    function inserirTexto() {
+
+        var texto = "Ladson Leno"
+        document.getElementById('campo').value = texto
+    }
+
+    function limparTexto() {
+        document.getElementById('campo').value = ' '
+    }
+
+</script>
+
 </html>
